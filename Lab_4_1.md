@@ -109,6 +109,6 @@ CREATE TABLE OrderDetails (
     FOREIGN KEY (OrderNum) REFERENCES Orders(OrderNum),
     FOREIGN KEY (CatalogNum) REFERENCES Products(CatalogNum)
 );
-
+```
 ## Итоговая БД, созданная в MySQL Workbench
 ![Фото](screen_4_1.png)
