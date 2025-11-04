@@ -25,7 +25,7 @@ INSERT INTO Book (Author, Title, Publisher, BookYear) VALUES
 ('Мериме П.', 'Матео Фальконе', 'ФТМ', 2018);
 ```
 
-ФОТКА ОБНОВЛЕННОЙ ТАБЛИЦЫ
+![Фото](1.png)
 
 Запрос 0: Все авторы с повторениями
 
@@ -33,7 +33,7 @@ INSERT INTO Book (Author, Title, Publisher, BookYear) VALUES
 SELECT Book.Author FROM Book;
 ```
 
-https://screen_0.png
+![Фото](2.png)
 
 Пояснение: Данный запрос выводит всех авторов из таблицы Book, включая повторения. Как видно из результата, автор "Мериме П." встречается несколько раз, так как у него несколько книг в базе данных.
 
@@ -44,7 +44,7 @@ https://screen_0.png
 SELECT DISTINCT Book.Author FROM Book;
 ```
 
-https://screen_1.png
+![Фото](3.png)
 
 Пояснение: Оператор DISTINCT удаляет дублирующиеся записи из результата. Теперь каждый автор выводится только один раз, независимо от количества его книг в базе.
 
@@ -55,7 +55,7 @@ https://screen_1.png
 SELECT DISTINCT Book.Author FROM Book ORDER BY Book.Author;
 ```
 
-https://screen_2.png
+![Фото](4.png)
 
 Запрос 3: Авторы и годы издания с сложной сортировкой
 
@@ -65,7 +65,7 @@ FROM Book
 ORDER BY Book.Author ASC, Book.BookYear DESC;
 ```
 
-https://screen_3.png
+![Фото](5.png)
 
 Запрос 4: Книги с сортировкой по году и названию
 
@@ -74,7 +74,7 @@ SELECT * FROM Book
 ORDER BY Book.BookYear ASC, Book.Title ASC;
 ```
 
-https://screen_4.png
+![Фото](6.png)
 
 Пояснение: Оператор ORDER BY позволяет сортировать результаты запроса. Можно сортировать по нескольким полям с указанием направления (ASC - по возрастанию, DESC - по убыванию).
 
@@ -87,7 +87,7 @@ ORDER BY Book.BookYear DESC
 LIMIT 2;
 ```
 
-https://screen_5.png
+![Фото](7.png)
 
 Пояснение: В Access используется оператор TOP, но в MySQL его аналогом является LIMIT. Данный запрос выводит только 2 первые книги.
 
@@ -100,7 +100,7 @@ ORDER BY Book.BookYear ASC
 LIMIT 5;
 ```
 
-https://screen_6.png
+![Фото](8.png)
 
 Пояснение: Для вывода первой половины записей в MySQL используется LIMIT с вычислением количества записей. В данном случае выводится 5 самых старых книг.
 
@@ -113,7 +113,7 @@ FROM Book INNER JOIN BookInLib
 ON Book.BookID = BookInLib.BookID;
 ```
 
-https://screen_7.png
+![Фото](9.png)
 
 Запрос 8: LEFT JOIN связанных таблиц
 
@@ -123,7 +123,7 @@ FROM Book LEFT JOIN BookInLib
 ON Book.BookID = BookInLib.BookID;
 ```
 
-https://screen_8.png
+![Фото](10.png)
 
 Пояснение:
 - INNER JOIN возвращает только те записи, для которых есть соответствие в обеих таблицах
@@ -138,7 +138,7 @@ FROM Book
 WHERE Book.BookYear BETWEEN 1997 AND 2001;
 ```
 
-https://screen_9.png
+![Фото](11.png)
 
 Запрос 10: Книги с условием IN
 
@@ -149,7 +149,7 @@ WHERE Book.BookYear BETWEEN 1997 AND 2001
 AND Book.Publisher IN ('Азбука', 'Политехника');
 ```
 
-https://screen_10.png
+![Фото](12.png)
 
 Запрос 11: Книги с условием OR
 
@@ -160,7 +160,7 @@ WHERE Book.BookYear BETWEEN 1997 AND 2001
 AND (Book.Publisher = 'Азбука' OR Book.Publisher = 'Политехника');
 ```
 
-https://screen_11.png
+![Фото](13.png)
 
 Запрос 12: Сложное условие с LIKE
 
@@ -172,7 +172,7 @@ AND (Author LIKE 'Г%' OR Publisher LIKE '%а')
 ORDER BY Title DESC;
 ```
 
-https://screen_12.png
+![Фото](14.png)
 
 Пояснение: Оператор LIKE используется для поиска по шаблону:
 - 'Г%' - начинается с буквы "Г"
