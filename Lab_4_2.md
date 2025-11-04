@@ -174,6 +174,16 @@ ORDER BY Title DESC;
 
 ![Фото](14.png)
 
+#### Анализ SQL-запроса
+
+```sql
+SELECT *
+FROM Book
+WHERE Author LIKE 'A%' OR BookYear > 2000 AND NOT Publisher LIKE '[ИП]%';
+```
+
+![Фото](15.png)
+
 Пояснение: Оператор LIKE используется для поиска по шаблону:
 - 'Г%' - начинается с буквы "Г"
 - '%а' - заканчивается на букву "а"
